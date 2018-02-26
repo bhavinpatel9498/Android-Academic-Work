@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:components="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="m.com.lab5.MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp">
+
+    <RelativeLayout
+        android:id="@+id/relview1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.4"
+            android:background="@android:color/black"
+            android:scaleType="centerCrop"
+            android:src="@drawable/background" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/textView2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="#F2F3F4"
+            android:popupBackground="@android:color/darker_gray"
+            android:spinnerMode="dialog" />
+
+        <m.com.lab5.GifView
+            android:id="@+id/gifImg"
+            android:layout_width="300dp"
+            android:layout_height="120dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            components:src="@drawable/car" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/gifImg"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="13dp"
+            android:padding="10dp"
+            android:shadowColor="#B30753"
+            android:shadowDx="0.0"
+            android:shadowDy="0.0"
+            android:shadowRadius="12"
+            android:text="Auto Expo Pictures"
+            android:textSize="28sp"/>
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            style="@android:style/Widget.DeviceDefault.Light.SeekBar"
+            android:layout_width="200dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/spinner"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="21dp"
+            android:background="#2C3E50"
+            android:max="10"
+            android:min="0"
+            android:progress="0" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/seekBar"
+            android:layout_marginRight="10dp"
+            android:layout_toStartOf="@+id/seekBar"
+            android:text="0 Sec"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/seekBar"
+            android:layout_marginLeft="10dp"
+            android:layout_toEndOf="@+id/seekBar"
+            android:text="10 Sec"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/seekBar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:text="Start Slide show" />
+
+
+    </RelativeLayout>
+
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
